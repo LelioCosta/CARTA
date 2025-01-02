@@ -1,0 +1,40 @@
+MODELO (main) apenas um exemplo, podem descrever conforme sua realidade. 
+
+O principal objetivo do protocolo CARTA é apresentar os riscos advindos dos déficits de segurança identificados numa aplicação, e que não foram possíveis de serem corrigidos ou melhorados. 
+Esse risco deve ser assumido pela área de negócio, ou seja, pelo owner “dono” da aplicação, que é a pessoa responsável e responde pelo serviço e que presta contas do uso dos recursos. 
+Após o “de acordo” do owner, esse e-mail pé levando ao Ricardo Santoro o qual somente vai analisar se antes o “de acordo” acima estiver obtido.  
+ 
+A apresentação deve ser simples, objetiva e apresentada no modelo executivo abaixo. Devemos informar somente o necessário, sem “florear” ou listar muitos itens que não agregam ou que sua ausência não será notada. 
+ 
+ 
+CARTA: Continuous Adaptive Risk and Trust Assessment ou Análise Contínua e Adaptável de Riscos e Confiança.
+fonte: https://www.gartner.com/smarterwithgartner/the-gartner-it-security-approach-for-the-digital-age
+ 
+Motivo: 
+•	As evidencias mostram que a arquitetura não comtempla o compliance de segurança “defence in depth framework” da "empresa que emite a CARTA contra o fornecedor".  
+ 
+Sobre a Aplicação:
+•	A aplicação https://www.example.com/  é uma aplicação de “descrever sucintamente a aplicação” , e possuí deficientes de segurança!
+o	A aplicação é antiga, “rescente ou em desenvolvimento”... num ambiente aws, azure, GCP.... modelo SaaS exposta na web “ou acesso via rede/VPN (um ou outro) 
+o	Trabalha com dados pessoais e sensíveis de pacientes...
+o	Integração com alguma aplicação nativamente, ou via barramento (API) , ou outra aplicação...
+o	Ambiente multitenant com banco de dados compartilhado ou exclusivo. Outra opção é ambiente plenamente exclusivo.  
+ 
+Definições:
+•	Não se pretende ficar com a aplicação por muito tempo.  A aplicação/integração vai perdurar por todo ciclo de vida do contrato atual. 
+•	As recomendações de segurança demandam uma nova proposta num ambiente (relatar por que não se corrige o problema de forma sucinta)  com técnicas de segurança para uma empresa do porte da oncoclinicas. 
+ 
+Riscos do rollout da “integração/aplicação” para "empresa que emite a CARTA contra o fornecedor". na APLICAÇÂO/SISTEMA em produção. 
+•	A aplicação atual manipula diretamente o banco de dados, ou seja, não passa pelo barramento  (gateWAY de API). Ou a integração a via planilha manual, “informar afalta de automação” ou 
+•	Não tem WAF,FW na arquitetura, ou sem criptografia em repouso, ou criptografia me trânsito fraca, ou baixa maturidade de segurança nota “D”(nota baixa no observatory mozila)
+•	Relatar se a aplicação/sistema não for moderna ou não contemplar cloudfomation na estera de CI/CD
+•	Sem SSO single sign on / 2FA
+•	Usuário e senhas expostos ao fazer login
+•	O ambiente atual não atende requisitos de segurança e não possui técnicas de segurança que possa ser usadas como compensadores
+•	Esses riscos abrem caminhos, superfície de ataque para um potencial atacante malicioso ou até mesmo de ataques de bots que são ferramentas automatizadas.
+ 
+Premissa:
+•	Aplicação será integrada via API  ao final desse ano. Ou Algo que ainda será ou esta sendo feito para regularizar. 
+
+assinatura:
+emitir o "de acordo" pelo sponsor do projeto seguido do Diretor de Segurança da Informação. 
